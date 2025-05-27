@@ -1,0 +1,36 @@
+<Card title="Shops to date">
+  <table class="table is-fullwidth">
+    <thead>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Rating</th>
+      <th>Method</th>
+      <th>Shop Type</th>
+      <th>Creator</th>
+    </thead>
+    <tbody>
+      {{#each shops}}
+      <tr>
+        <td>
+          {{name}}
+        </td>
+        <td>
+          {{adress}}
+        </td>
+        <td>
+          {{rating}}
+        </td>
+        <td>
+          {{method}}
+        </td>
+        <td>
+          {{shoptype.category}}
+        </td>
+        <td>
+          {{creator.firstName}} {{creator.lastName}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</Card>

@@ -1,0 +1,42 @@
+<form action="/create" method="POST">  <div class="field">
+    <label class="label">Enter Name</label>
+    <input class="input" type="text" placeholder="Name" name="name" />
+  </div>
+    <div class="field">
+    <label class="label">Enter Address</label>
+    <input class="input" type="text" placeholder="Address" name="address" />
+  </div>
+  <div class="field">
+    <label class="label">Enter Rating</label>
+    <input class="input" type="number" placeholder="Rating" name="rating" value="1" />
+  </div>
+  <div>
+    <div class=" box field is-horizontal">
+      <div class="field-body ml-6">
+        <div class="control is-expanded mt-2">
+          <input class=" radio" type="radio" name="method" value="mobile" />
+          Mobile
+          <input class="radio" type="radio" name="method" value="desktop" />
+          Desktop
+        </div>
+      </div>
+      <div class="field-body">
+        <div class="select">
+          <select name="shoptype">
+            {{#each shoptypes}}
+            <option value={{_id}}> {{category}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="field mt-2">
+    {{> coordinates}}
+  </div>
+  <div class="field">
+    <div class="control">
+      <button class="button is-success is-fullwidth">Create</button>
+    </div>
+  </div>
+</form>
